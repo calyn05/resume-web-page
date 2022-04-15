@@ -7,6 +7,9 @@
     --clr-grey_med: hsl(216deg 8% 23% / 0.5);
     --clr-blue_dark: hsl(213, 19%, 18%);
     --clr-blue_vdark: hsl(216, 12%, 8%);
+
+    --box-shadow: 6px 5px 10px rgb(80, 80, 93);
+    
   
     
     /* font */
@@ -58,9 +61,9 @@
     font-size: var(--fs-500);
     line-height: 1.5;
     min-height: 100vh;
-    background-color: var(--clr-white);
     color: var(--clr-blue_vdark);
-   
+    background: rgb(172,182,229);
+    background: linear-gradient(90deg, rgba(172,182,229,1) 0%, rgba(134,253,232,1) 100%);
   }
   
   img {
@@ -219,7 +222,7 @@
     align-items: center;
   }
 
-  @media screen and (max-width: 60.5rem){
+  @media screen and (max-width: 37.5rem) {
     .nav-list {
       position: fixed;
       bottom: -100%;
@@ -232,7 +235,6 @@
       z-index: 100;
       transition: .3s;
     }
-    
   }
   
   .mobile-nav__toggle {
@@ -240,13 +242,14 @@
     font-size: 1.4rem;
     cursor: pointer;
     border-radius: 1rem;
+    color: var(--clr-blue_dark);
 
   }
   
   .nav-list {
     text-align: center;
     grid-template-columns: repeat(3, 1fr);
-    --gap: 2rem;
+    gap: 2rem;
   }
 
   .nav-list li a {
@@ -272,6 +275,12 @@
 
   /* Home */
 
+  .home {
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
   .home-container {
     flex-direction: column;
   }
@@ -288,12 +297,12 @@
 
   .home-address {
     flex-direction: column;
-    font-size: var(--fs-400);
   }
 
   .home-address span {    
     display: inline-flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .home-address span i {
@@ -304,12 +313,11 @@
   /* Social */
 
   .social-container {
+    box-shadow: var(--box-shadow);
     flex-direction: column;
     text-align: center;
-  }
-
-  .social-container h2 {
-    margin-top: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
   }
 
   .social-profiles {
@@ -327,24 +335,35 @@
     font-size: 1.2rem;
   }
 
-  .profile-container {
+  .about-container {
     text-align: center;
-  }
-
-  .profile-container h2 {
-    margin-top: 1rem;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
   }
 
   /* Education and Experience*/
 
+  .education {
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    margin-top: 2rem;
+  }
+  
+  .experience {
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    margin-top: 2rem;
+  }
+  
+  
+  
+  .education-container {
+    flex-direction: column;
+  }
+
   .education h2,
   .experience h2 {
     text-align: center;
-    margin-top: 2rem;
-  }
-
-  .education-container {
-    flex-direction: column;
   }
 
   .edu-time,
@@ -381,8 +400,13 @@
 
   /* Skills */
 
-  .skills h2 {
+  .skills {
+    padding: 1rem;
     margin-top: 2rem;
+    box-shadow: var(--box-shadow);
+  }
+
+  .skills h2 {
     text-align: center;
   }
 
@@ -404,18 +428,55 @@
     margin-right: .75rem;
   }
 
-  /* Certificates */
-
-  .certificates h2 {
-    text-align: center;
-    margin-top: 2rem;
+  @media screen and (max-width: 18.75rem) {
+    .skills-container {
+      grid-template-columns: auto;
+    }
   }
+
+  /* Projects */
+
+
+  .projects {
+    padding: 1rem;
+    margin-top: 2rem;
+    box-shadow: var(--box-shadow);
+  }
+
+  .projects-content {
+    flex-direction: column;
+  }
+
+  .projects-content img {
+    max-width: 60%;
+    align-self: center;
+    clip-path: inset(10% 2%);
+  }
+
+  .projects h2 {
+    text-align: center;
+  }
+
+  .visit-btn {
+    display: inline-block;
+    max-width: fit-content;
+    background-color: var(--clr-grey_med);
+    color: white;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    align-self: center;
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+  }
+
+
 
   /* Scroll top */
 
   .scroll-top {
     position: fixed;
-    right: 1rem;
+    right: 3rem;
     bottom: -20%;
     justify-content: center;
     align-items: center;
@@ -441,17 +502,24 @@
   .change-theme__btn {
     position: absolute;
     top: 2rem;
-    right: 1.5rem;
+    right: 3rem;
     color: var(--clr-blue_dark);
     font-size: 1.2rem;
     cursor: pointer;
+    background-color: hsl(216deg 8% 23% / 0.3);
+    border-radius: 50%;
+    padding: .5rem;
   }
 
-  body.dark-theme {
+  .dark-theme {
+    background: rgb(15,32,39);
+    background: linear-gradient(90deg, rgba(15,32,39,1) 0%, rgba(32,58,67,1) 0%, rgba(44,83,100,1) 100%);
     --clr-orange: hsl(25, 97%, 53%);
     --clr-blue_vdark: hsl(0 0% 100%);
     --clr-blue_dark: hsl(217, 12%, 63%);
     --clr-grey_med: hsl(216deg 8% 23% / 0.5);
     --clr-grey_light: hsl(213, 19%, 18%);
     --clr-white: hsl(216, 12%, 8%);
+
+    --box-shadow: 6px 5px 10px rgb(150, 150, 172);
   }

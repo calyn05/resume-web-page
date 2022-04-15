@@ -50,8 +50,8 @@ const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dar
 const getCurrentIcon = () => themeBtn.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
 
 if (selectedTheme) {
-    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](dark-theme);
-    themeBtn.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove']('icon-theme');
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+    themeBtn.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove']('iconTheme');
 }
 
 themeBtn.addEventListener('click', () => {
