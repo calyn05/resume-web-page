@@ -1,14 +1,15 @@
 :root {
 
     /* hsl colors */
-    --clr-orange: hsl(25, 97%, 53%);
     --clr-white: hsl(0 0% 100%);
-    --clr-grey_light: hsl(217, 12%, 63%);
     --clr-grey_med: hsl(216deg 8% 23% / 0.5);
     --clr-blue_dark: hsl(213, 19%, 18%);
     --clr-blue_vdark: hsl(216, 12%, 8%);
 
-    --box-shadow: 6px 5px 10px rgb(80, 80, 93);   
+    --box-shadow: 6px 5px 10px rgb(80, 80, 93); 
+    
+    --nav-back__color: linear-gradient(180deg, rgb(110, 196, 230) 0%, rgb(86, 153, 167) 50%, rgb(82, 180, 219) 100%);
+
   
     
     /* font */
@@ -76,39 +77,6 @@
     list-style: none;
   }
   
-  /* project colors */
-  
-  .background-color__dblue {
-    background-color: var(--clr-blue_dark);
-  }
-  
-  .background-color__medgrey {
-    background-color: var(--clr-grey_med);
-  }
-  
-  .background-color__lgrey {
-    background-color: var(--clr-grey_light);
-  }
-  
-  .background-color__orange {
-    background-color: var(--clr-orange);
-  }
-  
-  .background-color__white {
-    background-color: var(--clr-white);
-  }
-  
-  .txt-orange {
-    color: var(--clr-orange);
-  }
-  
-  .txt-light__grey {
-    color: var(--clr-grey_light);
-  }
-  
-  .txt-white {
-    color: var(--clr-white);
-  }
   
   /* typo */
   
@@ -191,6 +159,7 @@
   .logo {
     max-width: 17%;
     border-radius: 1rem;
+    margin-left: .4rem;
   }
   
   .primary-header {
@@ -199,7 +168,7 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: rgb(49, 105, 113, .9);
+    background: var(--nav-back__color);
     box-shadow: 0 -1px rgba(0, 0, 0, .5);
     transition: .3s;
     z-index: 100;
@@ -219,8 +188,9 @@
     left: 0;
     width: 100%;
     padding: 2rem 1.5rem;
-    background-color: var(--clr-white);
+    background: var(--nav-back__color);
     color: var(--clr-blue_vdark);
+    border-radius: 1rem 1rem 0 0;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .5);
     z-index: 100;
     transition: .3s;
@@ -284,11 +254,11 @@
   
   .mobile-nav__toggle {
     background: none;
-    font-size: 2.5rem;
+    font-size: clamp(1rem, 2vw + 2rem, 3rem);
     cursor: pointer;
-    color: var(--clr-blue_dark);
-    padding: 1px;
+    color: var(--clr-blue_vdark);
     border: none;
+    padding-top: .5rem;
   }
   
   .nav-list {
@@ -323,8 +293,20 @@
   }
 
   .home-container {
+    position: relative;
     flex-direction: column;
   }
+
+  
+  .home-container a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 
   .home-meta {
     flex-direction: column;
@@ -486,6 +468,11 @@
   }
 
   @media screen and (min-width: 60.5rem) {
+
+    .resume-left > * {
+      margin: 0;
+    }
+
     .skills-container {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -560,7 +547,7 @@
     main {
       display: grid;
       grid-template-columns: 30% 1fr;
-      gap: 1rem;
+      gap: 2rem;
       margin-bottom: 0;
     }
 
@@ -645,7 +632,7 @@
 
   @media screen and (min-width: 60.5rem) {
     .change-theme__btn {
-      top: 2rem;
+      top: 2.7rem;
       position: fixed;
     }
 
@@ -659,12 +646,12 @@
   .dark-theme {
     background: rgb(15,32,39);
     background: linear-gradient(90deg, rgba(15,32,39,1) 0%, rgba(32,58,67,1) 0%, rgba(44,83,100,1) 100%);
-    --clr-orange: hsl(25, 97%, 53%);
     --clr-blue_vdark: hsl(0 0% 100%);
     --clr-blue_dark: hsl(217, 12%, 63%);
     --clr-grey_med: hsl(216deg 8% 23% / 0.5);
-    --clr-grey_light: hsl(213, 19%, 18%);
     --clr-white: hsl(216, 12%, 8%);
 
     --box-shadow: 6px 5px 10px rgb(150, 150, 172);
+
+    --nav-back__color: linear-gradient(180deg, rgba(21,50,62,1) 0%, rgba(27,126,114,1) 50%, rgba(15,48,61,1) 100%);
   }
