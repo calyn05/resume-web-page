@@ -4,11 +4,286 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calin's WebPage Portfolio</title>
+    <title>Calin's Resume WebPage</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico.png" type="image/x-icon">
 
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">     
+    
     <link rel="stylesheet" href="assets/style.css">
+
+    <script src="assets/index.js" defer></script>
+    
 </head>
 <body>
-    
+    <header class="primary-header" id="primary-header">
+        <nav class="primary-navigation flex" id="primary-navigation">
+            <div>
+                <a href="index.html"><img class="logo"
+                     src="assets/images/logo/logo_dark.png" alt="Calin's logo"></a>
+            </div>
+
+            <ul class="nav-list" id="nav-list">
+                <li>
+                    <a href="#home">
+                        <i class="bx bx-home"></i><span class="fw-600">Home</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#about">
+                        <i class="bx bxs-user-rectangle"></i><span class="fw-600">About</span>                </a>
+                </li>
+
+                <li>
+                    <a href="#education">
+                        <i class="bx bx-book"></i><span class="fw-600">Education</span>                    </a>
+                </li>
+
+                <li>
+                    <a href="#skills">
+                        <i class="bx bx-receipt"></i><span class="fw-600">Skills</span>                 </a>
+                </li>
+
+                <li>
+                    <a href="#experience">
+                        <i class="bx bx-briefcase"></i><span class="fw-600">Experience</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projects">
+                        <i class="bx bx-award"></i><span class="fw-600">Projects</span>                   </a>
+                </li>
+            </ul>
+
+            <button class="mobile-nav__toggle" id="nav-toggle">
+                <i class="bx bxs-grid"></i><span class="screen-reader">Menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="flow">
+        <div class="resume-left flow">
+            <section class="home" id="home">
+                <div class="home-container flex flow">
+                    <div class="home-meta flex">
+                        <img class="profile-pic" src="assets/images/Calin's Resume.png" alt="Calin's code profile picture">
+                        <h1 class="home-title"><span class="uppercase fw-600">Calin</span> Szekely</h1>
+                        <h3>Full Stack Web developer</h3>
+
+                        <!-- PDF resume download -->
+                        <!-- <div>
+                            <a download="" href="#"></a>
+                        </div>
+                    </div> -->
+
+                    <div class="home-address flex fs-400">
+                        <span>
+                            <i class="bx bx-map"></i>Bucharest, Romania
+                        </span>
+                        <span>
+                            <i class="bx bx-envelope"></i>calins05@proton.me
+                        </span>
+                        <span>
+                            <i class="bx bx-phone"></i>+40 799 9999 9999
+                        </span>
+
+                    </div>
+
+                    <a class="fw-600" href="https://api.whatsapp.com/send?phone=079999999999" target="_blank"><i class='bx bxl-whatsapp fs-800'></i>Chat</a>
+                </div>
+            </section>
+
+            <!-- Theme change -->
+
+            <i class="bx bx-moon change-theme__btn" title="theme" id="change-theme__btn"></i>
+
+            <section class="social-container flex ">
+                <h2>Social</h2>
+
+                <div class="social-profiles flex">
+                    <a href="https://linkedin.com/" target="_blank">
+                        <i class="bx bxl-linkedin-square"></i>@Calin Szekely
+                    </a>
+                    <a href="https://facebook.com/" target="_blank">
+                        <i class="bx bxl-facebook"></i>@Calyn Szekely
+                    </a>
+                    <a href="https://instagram.com/" target="_blank">
+                        <i class="bx bxl-instagram"></i>@calyn.I.am
+                    </a>
+                    <a href="https://github.com/calyn05" target="_blank">
+                        <i class='bx bxl-github'></i>GitHub profile
+                    </a>
+                </div>
+
+            </section>
+
+            <section class="about-container flow" id="about">
+                <h2>About Me</h2>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus optio nostrum officia corrupti tenetur magni, dolore ratione sequi commodi nam, voluptatem velit vero. Ex sed commodi magni, quae nisi at libero ratione dolores qui harum, perferendis soluta provident placeat aspernatur, iure perspiciatis officiis eaque ea expedita cupiditate illo? Eveniet, officiis.</p>
+
+            </section>
+
+            <section class="education flow" id="education">
+                <h2>Education</h2>
+
+                <div class="education-container flex flow">
+                    <div class="edu-content flex">
+                        <div class="edu-time">
+                            <span class="edu-circle"></span>
+                            <span class="edu-line"></span>
+                        </div>
+
+                        <div class="edu-data grid">
+                            <h3 class="fw-600">Master of design</h3>
+                            <span class="edu-studies fw-600">NewTech Academy</span>
+                            <span class="edu-year">2022-2023</span>
+                        </div>
+                    </div>
+
+                    <div class="edu-content flex">
+                        <div class="edu-time">
+                            <span class="edu-circle"></span>
+                            <span class="edu-line"></span>
+                        </div>
+
+                        <div class="edu-data grid">
+                            <h3 class="fw-600">Master in UI/UX</h3>
+                            <span class="edu-studies fw-600">NewTech Academy</span>
+                            <span class="edu-year">2022-2023</span>
+                        </div>
+                    </div>
+
+                    <div class="edu-content flex">
+                        <div class="edu-time">
+                            <span class="edu-circle"></span>
+                            <!-- <span class="edu-line"></span> -->
+                        </div>
+
+                        <div class="edu-data grid">
+                            <h3 class="fw-600">Full Stack Web Development</h3>
+                            <span class="edu-studies fw-600">NewTech Academy</span>
+                            <span class="edu-year">2022 - 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="skills flow" id="skills">
+                <h2>Skills</h2>
+
+                <div class="skills-container grid ">
+                    <ul class="skills-meta">
+                        <li class="skills-name flex fw-600">
+                            <span class="skills-circle"></span> Html
+                        </li>
+                        <li class="skills-name flex fw-600">
+                            <span class="skills-circle"></span> Css
+                        </li>
+                        <li class="skills-name flex fw-600">
+                            <span class="skills-circle"></span> Javascript
+                        </li>
+                        <li class="skills-name flex fw-600">
+                            <span class="skills-circle"></span> Typescript
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li class="skills-name flex fw-600">
+                            <span class="skills-circle"></span> NodeJS
+                        </li>
+                        <li class="skills-name flex fw-600">
+                            <span class="skills-circle"></span> Angular
+                        </li>
+                        <li class="skills-name flex fw-600">
+                            <span class="skills-circle"></span> Git
+                        </li>
+                        <li class="skills-name flex fw-600">
+                            <span class="skills-circle"></span> Firebase
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="resume-right flow">
+            <section class="experience flow" id="experience">
+                <h2>Experience</h2>
+
+                <div class="exp-container grid">
+                    <div class="exp-content flex">
+                        <div class="exp-time">
+                            <span class="exp-circle"></span>
+                            <span class="exp-line"></span>
+                        </div>
+
+                        <div class="exp-meta grid">
+                            <h3 class="fw-600">Police officer</h3>
+                            <span class="fw-600">From 2012 to 2022</span>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis alias aliquam exercitationem sed consequatur facilis tenetur nulla, nostrum expedita iste.</p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="exp-content flex">
+                        <div class="exp-time">
+                            <span class="exp-circle"></span>
+                            <!-- <span class="exp-line"></span> -->
+                        </div>
+
+                        <div class="exp-meta grid">
+                            <h3 class="fw-600">Full Stack Web Developer</h3>
+                            <span class="fw-600">From 2022 to present</span>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis alias aliquam exercitationem sed consequatur facilis tenetur nulla, nostrum expedita iste.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects flow" id="projects">
+                <h2>Projects</h2>
+
+                <div class="projects-container grid flow">
+                    
+                    <div class="projects-content flow flex">
+                        <h3 class="fw-600">Projects completed</h3>
+                        <h4 class="fw-600">Star Project</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, adipisci?</p>
+                        <img src="assets/images/homepage star project.jpg" alt="Star project">
+                        
+                        <h4 class="fw-600">Rating Component</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, adipisci?</p>
+                        <img src="assets/images/rating component.jpg" alt="Star project">
+
+                    </div>
+
+                    <div class="projects-content flow flex">
+                        <h3 class="fw-600">Inspired to create</h3>
+                        <h4 class="fw-600">AirBnb.com</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, adipisci?</p>
+                        <a href="https://airbnb.com/" target="_blank" class="visit-btn fs-400">Visit AirBnb.com</a>
+
+                        <h4 class="fw-600">Ferrari.com</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, adipisci?</p>
+                        <a href="https://ferrari.com/" target="_blank" class="visit-btn fs-400">Visit Ferrari.com</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Scroll top -->
+
+    <a href="#" class="scroll-top flex" id="scroll-top">
+        <i class="bx bx-up-arrow-alt scroll-top__icon"></i>
+    </a>
+
 </body>
 </html>
