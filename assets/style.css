@@ -275,6 +275,12 @@ main {
   .primary-header {
     padding-top: 1rem;
   }
+
+  main {
+    max-width: 1980px;
+    align-self: center;
+    justify-self: center;
+  }
 }
 
 .mobile-nav__toggle {
@@ -320,9 +326,6 @@ main {
 .home-container {
   position: relative;
   flex-direction: column;
-}
-
-.home-container > a {
 }
 
 .home-meta {
